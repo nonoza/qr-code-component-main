@@ -1,54 +1,42 @@
-@import '../css/colors.scss';
-@import '../css/typography.scss';
-body{
-    background-color: $lightGrey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height:100vh;
-    overflow-y: hidden;
-}
-.container {
-    width: 292px;
-    height: 454px;
-    background-color:$white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    padding: 28px;
-    
-    .qr-image {
-        display: flex;
-        justify-content: center;
-        img {
-            width: 315px;
-            border-radius: 20px;
-            height: 321px;
-    
-        }
+@import "./typography.scss";
+@import "./colors.scss";
+body {
+    background-color: hsl(212, 45%, 89%);
+    padding: 20% 5% 0;
+    font-family: $fonts;
+    font-size: $bodyfont;
+    text-align: center;
+    h1 {
+        margin: 0;
+        margin-top: 30px;
+        font-size: 1.3125rem;
     }
-    .qr-content{
-        padding: 20px;
-        .qr-title {
-            h1{
-                margin: 0;
-                font-size: 20px;
-                font-family: $fonts;
-                margin-bottom: 12px;
-                text-align: center;
-            }
+    p {
+        margin: 0;
+        margin-top: 0.9375rem;
+        color: $grayishBlue;
+    }
+    @media screen and (min-width: $desktop){
+        padding: 6% 0% 0 0;
+        
+    }
+    .container{
+        background-color: #fff;
+        border-radius: 1.5625rem;
+        padding: 1.375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 25.625rem;
+        @media screen and (min-width: $desktop){
+            max-width: 15.625rem;
+            margin: auto;
         }
-        .qr-copy {
-            p {
-                margin: 0;
-                font-size: 15px;
-                font-family: $fonts;
-                text-align: center;
-             
-                color: $grayishBlue;
-            }
+        img{
+            width: 100%;
+            border-radius: 1.125rem;
+
         }
     }
 }
